@@ -115,21 +115,31 @@ nnoremap : <nop>
 :command Qa qa
 :command QA qa
 
-noremap <silent>\1 1gt
-noremap <silent>\2 2gt
-noremap <silent>\3 3gt
-noremap <silent>\4 4gt
-noremap <silent>\5 5gt
-noremap <silent>\6 6gt
-noremap <silent>\7 7gt
-noremap <silent>\8 8gt
-noremap <silent>\9 9gt
-noremap <silent>\t :tabnew<cr> 
+let mapleader=','
+"noremap <leader>sv :source $MYVIMRC<cr>
+noremap <leader>ev :vs $MYVIMRC<cr>
+noremap <silent><leader>p "0p
+
+noremap <silent><leader>1 1gt
+noremap <silent><leader>2 2gt
+noremap <silent><leader>3 3gt
+noremap <silent><leader>4 4gt
+noremap <silent><leader>5 5gt
+noremap <silent><leader>6 6gt
+noremap <silent><leader>7 7gt
+noremap <silent><leader>8 8gt
+noremap <silent><leader>9 9gt
+noremap <silent><leader>t :tabnew<cr> 
 noremap <silent><tab>m :tabnew<cr> 
-noremap <silent>\g :tabclose<cr> 
+noremap <silent><leader>g :tabclose<cr> 
 noremap <silent><tab>e :tabclose<cr> 
 noremap <silent><tab>n :tabnext<cr> 
 noremap <silent><tab>p :tabprev<cr> 
+
+inoremap <c-j> <down>
+inoremap <c-k> <up>
+inoremap <c-h> <left>
+inoremap <c-l> <right>
 
 "source ~/github/vim/asc.vim
 "source ~/github/vim/skywind.vim
