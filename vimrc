@@ -178,4 +178,10 @@ autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 expandtab 
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
-
+" When editing a file, always jump to the last cursor position
+if has("autocmd")
+autocmd BufReadPost * 
+\ if line("'\"") > 0 && line ("'\"") <= line("$") |
+\ exe "normal g'\"" | 
+\ endif                       
+endif
