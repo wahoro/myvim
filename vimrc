@@ -141,6 +141,11 @@ inoremap <c-k> <up>
 inoremap <c-h> <left>
 inoremap <c-l> <right>
 
+nnoremap <tab>h <c-w>h
+nnoremap <tab>j <c-w>j
+nnoremap <tab>k <c-w>k
+nnoremap <tab>l <c-w>l
+
 "source ~/github/vim/asc.vim
 "source ~/github/vim/skywind.vim
 
